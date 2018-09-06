@@ -12,6 +12,8 @@ import ssl
 import base64
 try:
     from cStringIO import StringIO
+except ImportError:
+    from io import StringIO
 except BaseException:
     from StringIO import StringIO
 import zipfile

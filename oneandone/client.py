@@ -1,6 +1,9 @@
 import time
 import logging
-import httplib as http_client
+try:
+    import httplib as http_client
+except ImportError:
+    import http.client as http_client
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
